@@ -1,0 +1,100 @@
+/* Сброс базовых отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 30px;
+  width: 350px;
+  border: 1px solid #dbdbdb;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.language {
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #8e8e8e;
+}
+
+.logo {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #fafafa;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signup-btn {
+  background: #0095f6;
+  color: white;
+  opacity: 0.5;
+  margin-top: 10px;
+}
+
+.signin-text {
+  font-size: 14px;
+  margin: 15px 0;
+  color: #262626;
+}
+
+.signin-text a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0095f6;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8e8e8e;
+  font-size: 12px;
+  margin: 20px 0;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: #dbdbdb;
+  margin: 0 10px;
+}
+
+.fb-btn {
+  background: #1877f2;
+  color: white;
+  font-size: 14px;
+}
