@@ -1,0 +1,156 @@
+@font-face {
+  font-family: Roboto-med;
+  font-weight: 500;
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto-reg;
+  font-weight: 400;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
+body {
+    margin: 0;
+    padding: 0 20px;
+    width: 375px;
+    height: 812px;
+    background-color: #fff;
+}
+
+.headerCont {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftSideHeader {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.firstSection {
+    margin-top: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.profileCommunity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.profileCommunity div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileCommunity p {
+    font-size: 17px;
+    font-family: Roboto-med, sans-serif;
+    margin: 0;
+}
+
+.profileCommunity span {
+    margin-top: 3px;
+    font-size: 12px;
+    font-family: Roboto-reg, sans-serif;
+}
+
+.profileDescription {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+    gap: 2px;
+    font-size: 14px;
+    font-family: Roboto-reg;
+}
+
+.link {
+    color: #0F4D73;
+}
+
+.profileButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.profileButtons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    font-size: 10px;
+    font-family: Roboto-reg;
+}
+
+.follow {
+    width: 145px;
+    height: 25px;
+    background-color: #1877F2;
+    color: #fff;
+}
+
+.message {
+    width: 145px;
+    height: 25px;
+    background-color: #DFDFDF;
+}
+
+.friend {
+    background-color: #DFDFDF;
+    width: 25px;
+    height: 25px;
+}
+
+.storyes {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    margin-top: 17px;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    font-family: Roboto-reg;
+    gap: 10px;
+}
+
+.story > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border: 1px, solid, #7E7E7E;
+    border-radius: 100%;
+}
+
+.story img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
