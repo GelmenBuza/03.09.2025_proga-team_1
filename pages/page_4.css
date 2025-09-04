@@ -1,19 +1,18 @@
 @font-face {
-  font-family: Roboto-med;
-  font-weight: 500;
-  src: url(../fonts/Roboto-Medium.ttf);
+    font-family: Roboto-med;
+    font-weight: 500;
+    src: url(../fonts/Roboto-Medium.ttf);
 }
 
 @font-face {
-  font-family: Roboto-reg;
-  font-weight: 400;
-  src: url(../fonts/Roboto-Regular.ttf);
+    font-family: Roboto-reg;
+    font-weight: 400;
+    src: url(../fonts/Roboto-Regular.ttf);
 }
 
 
 body {
     margin: 0;
-    padding: 0 20px;
     width: 375px;
     height: 812px;
     background-color: #fff;
@@ -22,7 +21,8 @@ body {
 .headerCont {
     display: flex;
     flex-direction: row;
-    margin-top: 40px;
+    padding: 0 20px;
+    padding-top: 40px;
     justify-content: space-between;
     align-items: center;
 }
@@ -31,6 +31,10 @@ body {
     display: flex;
     align-items: center;
     gap: 45px;
+}
+.leftSideHeader > span  {
+    font-size: 16px;
+    font-family: Roboto-med;
 }
 
 .button {
@@ -47,13 +51,15 @@ body {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    padding: 0 20px;
 }
 
 .profileCommunity {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .profileCommunity div {
@@ -81,6 +87,7 @@ body {
     gap: 2px;
     font-size: 14px;
     font-family: Roboto-reg;
+    padding: 0 20px;
 }
 
 .link {
@@ -92,12 +99,14 @@ body {
     flex-direction: row;
     gap: 14px;
     margin-top: 8px;
+    padding: 0 20px;
 }
 
 .profileButtons button {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     border-radius: 5px;
     border: none;
     font-size: 10px;
@@ -126,8 +135,9 @@ body {
 .storyes {
     display: flex;
     flex-direction: row;
-    gap: 14px;
+    justify-content: space-between;
     margin-top: 17px;
+    padding: 0 20px;
 }
 
 .story {
@@ -139,7 +149,7 @@ body {
     gap: 10px;
 }
 
-.story > div {
+.story>div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,4 +163,49 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 100%;
+}
+
+.galary {}
+
+.galaryMenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 34px;
+    margin-top: 18px;
+}
+
+.galaryMenu>img {
+    width: 22px;
+    height: 22px;
+}
+
+.galaryPhoto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+    margin-top: 12px;
+    z-index: 1;
+}
+
+.galaryPhoto > img {
+    width: 124px;
+    height: 125px;
+}
+
+footer {
+    height: 50px;
+    width: 375px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background-color: white;
+}
+
+footer div {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 25px;
+    justify-content: space-between;
 }
