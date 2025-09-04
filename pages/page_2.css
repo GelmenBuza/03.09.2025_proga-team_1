@@ -23,9 +23,9 @@ body {
 }
 
 .language {
-  text-align: right;
+  text-align: center;
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: #8e8e8e;
 }
 
@@ -64,22 +64,21 @@ body {
 }
 
 .signin-text {
-  font-size: 11px;
-  margin: 15px 0;
-  color: #262626;
+  font-size: 8px;
+  margin: 9px 0;
+  color: gray;
 }
 
 .signin-text a {
   text-decoration: none;
-  font-weight: bold;
-  color: #0095f6;
+  color: black;
 }
 
 .divider {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #8e8e8e;
+  color: gray;
   font-size: 10px;
   margin: 20px 0;
 }
