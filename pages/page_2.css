@@ -24,14 +24,50 @@ body {
 
 .language {
   text-align: center;
-  font-size: 12px;
   margin-bottom: 40px;
-  color: #8e8e8e;
+  background: transparent;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  color: #385185;
+  font-size: 12px;
+  padding-right: 20px;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  text-align-last: center;
+  width: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.language::after {
+  content: "▼";
+  font-size: 8px;
+  color: #385185;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 25px);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.lang-select option {
+  background: white;
+  color: #262626;
 }
 
 .logo {
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-weight: bold;
 }
 
