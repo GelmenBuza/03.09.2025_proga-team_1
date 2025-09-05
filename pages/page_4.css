@@ -149,10 +149,11 @@ body {
     gap: 10px;
 }
 
-.story>div {
+.story>button {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
     width: 58px;
     height: 58px;
     border: 1px, solid, #7E7E7E;
@@ -164,8 +165,6 @@ body {
     height: 50px;
     border-radius: 100%;
 }
-
-.galary {}
 
 .galaryMenu {
     display: flex;
