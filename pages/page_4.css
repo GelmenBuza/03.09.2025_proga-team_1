@@ -10,99 +10,121 @@
     src: url(../fonts/Roboto-Regular.ttf);
 }
 
+.text-med-16 {
+    font-size: 16px;
+    font-family: Roboto-med, sans-serif;
+}
+
+.text-med-17 {
+    font-size: 17px;
+    font-family: Roboto-med, sans-serif;
+    margin: 0;
+}
+
+.text-reg-12 {
+    font-size: 12px;
+    font-family: Roboto-reg, sans-serif;
+}
+
+.text-reg-14 {
+    font-size: 14px;
+    font-family: Roboto-reg, sans-serif;
+}
+
+.text-reg-10 {
+    font-size: 10px;
+    font-family: Roboto-reg, sans-serif;
+}
+
+.btn-reset {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-base {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-small {
+    width: 25px;
+    height: 25px;
+}
+
+.btn-medium {
+    width: 145px;
+    height: 25px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+
 
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
 }
 
 .container {
     margin: 0;
     width: 375px;
-    height: 812px;
+    height: 810px;
     background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #dbdbdb;
 
 }
 
 .headerCont {
-    display: flex;
-    flex-direction: row;
     padding: 0 20px;
     padding-top: 40px;
-    justify-content: space-between;
-    align-items: center;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    border: 1px solid #dbdbdb;
-    border-bottom: 0;
 }
 
 .leftSideHeader {
     display: flex;
-    align-items: center;
     gap: 45px;
-}
-
-.leftSideHeader>span {
-    font-size: 16px;
-    font-family: Roboto-med;
-}
-
-.button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
 }
 
 .firstSection {
     padding-top: 20px;
-    border-left: 1px solid #dbdbdb;
-    border-right: 1px solid #dbdbdb;
 }
 
 .profile {
-    display: flex;
-    flex-direction: row;
     gap: 50px;
     padding: 0 20px;
 }
 
 .profileCommunity {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
 }
 
-.profileCommunity div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.profileCommunity p {
-    font-size: 17px;
-    font-family: Roboto-med, sans-serif;
-    margin: 0;
-}
-
-.profileCommunity span {
-    margin-top: 3px;
-    font-size: 12px;
-    font-family: Roboto-reg, sans-serif;
-}
-
 .profileDescription {
-    display: flex;
-    flex-direction: column;
-    margin-top: 6px;
-    gap: 2px;
-    font-size: 14px;
-    font-family: Roboto-reg;
     padding: 0 20px;
+    padding-top: 6px;
+    gap: 2px;
 }
 
 .link {
@@ -110,65 +132,34 @@ body {
 }
 
 .profileButtons {
-    display: flex;
-    flex-direction: row;
     gap: 14px;
-    margin-top: 8px;
     padding: 0 20px;
-}
-
-.profileButtons button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    font-size: 10px;
-    font-family: Roboto-reg;
+    padding-top: 8px;
 }
 
 .follow {
-    width: 145px;
-    height: 25px;
     background-color: #1877F2;
     color: #fff;
 }
 
 .message {
-    width: 145px;
-    height: 25px;
     background-color: #DFDFDF;
 }
 
 .friend {
     background-color: #DFDFDF;
-    width: 25px;
-    height: 25px;
 }
 
 .storyes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 17px;
     padding: 0 20px;
+    padding-top: 17px;
 }
 
 .story {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 12px;
-    font-family: Roboto-reg;
     gap: 10px;
 }
 
 .story>button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
     width: 58px;
     height: 58px;
     border: 1px, solid, #7E7E7E;
@@ -183,23 +174,23 @@ body {
 
 .galaryMenu {
     display: flex;
-    justify-content: space-between;
     padding: 0 34px;
-    margin-top: 18px;
+    padding-bottom: 12px;
+    padding-top: 18px;
 }
 
-.galaryMenu>img {
+.galaryMenu button {
     width: 22px;
     height: 22px;
 }
 
 .galaryPhoto {
     display: grid;
+    overflow: scroll;
+    height: 342px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1px;
-    margin-top: 12px;
-    z-index: 1;
 }
 
 .galaryPhoto>img {
@@ -207,26 +198,18 @@ body {
 }
 
 .width-124 {
-    width: 123px;
+    width: 124px;
 }
 
 footer {
     height: 50px;
     width: 373px;
-    position: relative;
-    bottom: 30px;
-    z-index: 2;
     background-color: white;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border: 1px solid #dbdbdb;
-    border-top: 0;
+    border-radius: 8px;
 }
 
 footer div {
     display: flex;
     height: 100%;
-    align-items: center;
     padding: 0 25px;
-    justify-content: space-between;
 }
