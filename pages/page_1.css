@@ -1,0 +1,151 @@
+@font-face {
+    font-family: Inter-reg;
+    font-weight: 400;
+    src: url(../fonts/Inter_24pt-Regular.ttf);
+}
+
+@font-face {
+    font-family: Inter-med;
+    font-weight: 500;
+    src: url(../fonts/Inter_24pt-Medium.ttf);
+}
+
+@font-face {
+    font-family: Inter-semi;
+    font-weight: 600;
+    src: url(../fonts/Inter_24pt-SemiBold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  width: 375px;
+  height: 812px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+}
+
+main {
+  padding: 0 30px;
+}
+
+.language {
+  padding-top: 40px;
+  padding-bottom: 200px;
+  width: 100%;
+}
+
+.lang-select {
+  border: none;
+  color: #868686;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.lang-select option {
+  background: white;
+  color: #262626;
+}
+
+.logo {
+  width: 235px;
+}
+
+.logo img {
+  width: 100%
+}
+
+.text-sign {
+  font-size: 10px;
+  font-family: Inter-med, sans-serif;
+  padding-top: 24px;
+  padding-bottom: 100px;
+  color: #3A3A3A;
+}
+
+.log-button {
+  width: 315px;
+  height: 42px;
+  background-color: #1877F2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.log-button span {
+  font-size: 12px;
+  color: #fff;
+  font-family: Inter-med, sans-serif;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-size: 10px;
+  padding-top: 46px;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: #dbdbdb;
+  margin: 0 10px;
+  color: #6D6D6D;
+  font-family: Inter-semi;
+}
+
+.sing-up-phone {
+  padding-top: 46px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sing-up-phone a {
+  color: #323232;
+  font-family: Inter-semi;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  margin-top: 139px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #F4F4F4;
+}
+
+footer p {
+  font-size: 12px;
+  font-family: Inter-reg, sans-serif;
+  color: #6B6B6B;
+}
+
+footer a {
+  font-family: Inter-med, sans-serif;
+  text-decoration: none;
+  color: #23244F;
+}
