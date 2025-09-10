@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    text-align: center;
+    width: 300px;
+}
+.logo {
+    font-family: 'Billie', cursive; /* Поддержка кастомного шрифта */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+}
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0095f6;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login-button:hover {
+    background-color: #007bbf;
+}
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+.footer a {
+    color: #003569;
+    text-decoration: none;
+}
