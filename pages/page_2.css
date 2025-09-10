@@ -10,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-family: sans-serif;
 }
 
 .container {
@@ -34,6 +35,8 @@ body {
   color: #868686;
   font-size: 12px;
   cursor: pointer;
+  background-color: transparent;
+
 }
 
 .lang-select option {
