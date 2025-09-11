@@ -1,0 +1,133 @@
+body {
+    background-color: #FFFFFF;
+}
+
+.container {
+    width: 375px;
+    height: 812px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 334px;
+    height: 35px;
+    left: 21px;
+    right: 20px;
+    top: 44px;
+    bottom: 13px;
+}
+
+.Instagram {
+    font-size: 35px;
+    width: 122.74px;
+    height: 35px;
+    font-weight: bold;
+}
+
+.header-img {
+    display: flex;
+    gap: 25px;
+}
+
+.plus {
+    font-size: 22px 22px;
+}
+
+.Heart {
+    font-size: 25px 23px;
+}
+
+.message {
+    font-size: 22px 22px;
+}
+
+.section-1 {
+    margin: 20px 0;
+}
+
+.section-2 {
+    border-top: 1px solid #C9C9C9;
+}
+
+.marvel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.logo {
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.points {
+    align-items: end;
+}
+
+.story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 17px;
+    border: white;
+}
+
+.gradient {
+    border-radius: 50%;
+    background: linear-gradient(#FAF006, #FACC05F0, #FF000096, #6701E912, #6701E912);
+}
+
+.story > button {
+    width: 58px;
+    height: 58px;
+    border: 1px solid #7E7E7E;
+    border-radius: 100%;
+}
+
+.story img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.name-story {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-section-3 {
+    justify-content: space-between;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.img-section-3 img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    width: 375px;
+    height: 50px;
+    border-top: 1px solid #C9C9C9;
+    cursor: pointer;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 14px;
+}
