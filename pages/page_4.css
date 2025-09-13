@@ -1,0 +1,213 @@
+@font-face {
+    font-family: Roboto-med;
+    font-weight: 500;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto-reg;
+    font-weight: 400;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+.text-med-16 {
+    font-size: 16px;
+    font-family: Roboto-med, sans-serif;
+}
+
+.text-med-17 {
+    font-size: 17px;
+    font-family: Roboto-med, sans-serif;
+    margin: 0;
+}
+
+.text-reg-12 {
+    font-size: 12px;
+    font-family: Roboto-reg, sans-serif;
+}
+
+.text-reg-14 {
+    font-size: 14px;
+    font-family: Roboto-reg, sans-serif;
+}
+
+.text-reg-10 {
+    font-size: 10px;
+    font-family: Roboto-reg, sans-serif;
+}
+
+.btn-reset {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-base {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-small {
+    width: 25px;
+    height: 25px;
+}
+
+.btn-medium {
+    width: 145px;
+    height: 25px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0;
+    width: 375px;
+    height: 810px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #dbdbdb;
+
+}
+
+.headerCont {
+    padding: 0 20px;
+    padding-top: 40px;
+}
+
+.leftSideHeader {
+    display: flex;
+    gap: 45px;
+}
+
+.firstSection {
+    padding-top: 20px;
+}
+
+.profile {
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.profileCommunity {
+    width: 100%;
+}
+
+.profileDescription {
+    padding: 0 20px;
+    padding-top: 6px;
+    gap: 2px;
+}
+
+.link {
+    color: #0F4D73;
+}
+
+.profileButtons {
+    gap: 14px;
+    padding: 0 20px;
+    padding-top: 8px;
+}
+
+.follow {
+    background-color: #1877F2;
+    color: #fff;
+}
+
+.message {
+    background-color: #DFDFDF;
+}
+
+.friend {
+    background-color: #DFDFDF;
+}
+
+.storyes {
+    padding: 0 20px;
+    padding-top: 17px;
+    overflow-x: scroll;
+    gap: 10px;
+}
+
+.story>button {
+    width: 58px;
+    height: 58px;
+    border: 1px solid #7E7E7E;
+    border-radius: 100%;
+}
+
+.story img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.galaryMenu {
+    display: flex;
+    padding: 0 34px;
+    padding-bottom: 12px;
+    padding-top: 18px;
+}
+
+.galaryMenu button {
+    width: 22px;
+    height: 22px;
+}
+
+.galaryPhoto {
+    display: grid;
+    overflow: scroll;
+    height: 342px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+}
+
+.galaryPhoto>img {
+    height: 125px;
+}
+
+.width-124 {
+    width: 124px;
+}
+
+footer {
+    height: 50px;
+    width: 373px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+footer div {
+    display: flex;
+    height: 100%;
+    padding: 0 25px;
+}
