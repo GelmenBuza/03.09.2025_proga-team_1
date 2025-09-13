@@ -7,6 +7,7 @@ let posts = [
     }
 ]
 
+
 wrapper.innerHtml = ""
 
 for (let i of posts) {
