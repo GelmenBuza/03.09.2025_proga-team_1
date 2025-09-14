@@ -1,0 +1,15 @@
+
+/* Profile page */
+
+.profile_footer {
+    height: 50px;
+    width: 373px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.profile_footer div {
+    display: flex;
+    height: 100%;
+    padding: 0 25px;
+}
