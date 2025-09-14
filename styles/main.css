@@ -63,15 +63,15 @@
   justify-content: center;
   color: gray;
   font-size: 10px;
-  padding-top: 46px;
+  margin: 20px 0;
 }
 
 .divider span {
   flex: 1;
   height: 1px;
+  width: 100px;
   background: #dbdbdb;
   margin: 0 10px;
-  color: #6D6D6D;
   font-family: Inter-semi;
 }
 
@@ -87,6 +87,90 @@
   font-family: Inter-semi;
   font-size: 14px;
   text-decoration: none;
+}
+
+/* Sing up page */
+
+.language {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.logo {
+  margin-bottom: 25px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  font-size: 11px;
+  background: #fafafa;
+  width: 320px;
+  height: 40px;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-btn {
+  background: #0095f6;
+  color: white;
+  opacity: 0.6;
+  margin-top: 1px;
+}
+
+.signin-text {
+  font-size: 8px;
+  margin: 9px 0;
+  color: gray;
+}
+
+.signin-text a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.fb {
+    background: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    width: 290px;
+}
+
+.fb-logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.fb-text {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login</title>
+  <link rel="stylesheet" href="../styles/global.css">
+</head>
+<body>
+  <div class="container">
+    <div class="language">
+      <select class="lang-select" id="languageSwitcher">
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+
+    <div class="logo">
+        <img src="../images/logos_instagram.png" alt="Instagram Logo"/>
+    </div>
+
+    <form class="login-form">
+      <input type="text" placeholder="Phone number, email or username" required id="loginInput">
+      <input type="password" placeholder="Password" required>
+      <button class="btn signup-btn" disabled id="signupBtn">Sign Up</button>
+    </form>
+
+    <p class="signin-text" id="signinText">
+      Already have an account? <a href="#">Sign in.</a>
+    </p>
+
+    <div class="divider">
+      <span></span> OR <span></span>
+    </div>
+
+    <div class="center">
+      <button class="fb" id="fbBtn">
+        <span class="fb-logo">f</span>
+        <span class="fb-text">Sign Up with Facebook</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        signup: "Sign Up",
+        signin: 'Already have an account? <a href="#">Sign in.</a>',
+        fb: "Sign Up with Facebook",
+        loginPlaceholder: "Phone number, email or username"
+      },
+      ru: {
+        signup: "Зарегистрироваться",
+        signin: 'Уже есть аккаунт? <a href="#">Войти.</a>',
+        fb: "Войти через Facebook",
+        loginPlaceholder: "Телефон, email или имя пользователя"
+      },
+      es: {
+        signup: "Regístrate",
+        signin: '¿Ya tienes una cuenta? <a href="#">Inicia sesión.</a>',
+        fb: "Regístrate con Facebook",
+        loginPlaceholder: "Teléfono, correo o usuario"
+      },
+    };
+
+    const langSelect = document.getElementById("languageSwitcher");
+    const signupBtn = document.getElementById("signupBtn");
+    const signinText = document.getElementById("signinText");
+    const fbBtn = document.getElementById("fbBtn").querySelector(".fb-text");
+    const loginInput = document.getElementById("loginInput");
+
+    function applyLanguage(lang) {
+      signupBtn.textContent = translations[lang].signup;
+      signinText.innerHTML = translations[lang].signin;
+      fbBtn.textContent = translations[lang].fb;
+      loginInput.placeholder = translations[lang].loginPlaceholder;
+      langSelect.value = lang;
+    }
+
+    const savedLang = localStorage.getItem("lang") || "en";
+    applyLanguage(savedLang);
+
+    langSelect.addEventListener("change", () => {
+      const lang = langSelect.value;
+      localStorage.setItem("lang", lang);
+      applyLanguage(lang);
+    });
+  </script>
+</body>
+</html>
