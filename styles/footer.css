@@ -1,3 +1,29 @@
+/* Sing up page */
+
+.sing_up_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  margin-top: 139px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #F4F4F4;
+}
+
+.sing_up_footer p {
+  font-size: 12px;
+  font-family: Inter-reg, sans-serif;
+  color: #6B6B6B;
+}
+
+.sing_up_footer a {
+  font-family: Inter-med, sans-serif;
+  text-decoration: none;
+  color: #23244F;
+}
+
+
 
 /* Profile page */
 

@@ -25,6 +25,24 @@
     src: url(../fonts/Roboto-Regular.ttf);
 }
 
+@font-face {
+    font-family: Inter-reg;
+    font-weight: 400;
+    src: url(../fonts/Inter_24pt-Regular.ttf);
+}
+
+@font-face {
+    font-family: Inter-med;
+    font-weight: 500;
+    src: url(../fonts/Inter_24pt-Medium.ttf);
+}
+
+@font-face {
+    font-family: Inter-semi;
+    font-weight: 600;
+    src: url(../fonts/Inter_24pt-SemiBold.ttf);
+}
+
 .text-med-16 {
     font-size: 16px;
     font-family: Roboto-med, sans-serif;
@@ -99,12 +117,16 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    justify-content: center;
+    background: #fafafa;
+    align-items: center;
 }
 
 .container {
     margin: 0;
     width: 375px;
     height: 810px;
+    text-align: center;
     background-color: #fff;
     border-radius: 8px;
     border: 1px solid #dbdbdb;
