@@ -128,11 +128,9 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 0;
     width: 375px;
     height: 810px;
-    text-align: center;
     background-color: #fff;
     border-radius: 8px;
     border: 1px solid #dbdbdb;

@@ -1,7 +1,8 @@
-/* Sing up page */
+/* Page 1*/
 
 .login_main {
   padding: 0 30px;
+  text-align: center;
 }
 
 .language {
@@ -90,7 +91,7 @@
   text-decoration: none;
 }
 
-/* Sing up page */
+/* Page 2 */
 
 .language {
   text-align: center;
@@ -172,7 +173,7 @@
 }
 
 
-/* Profile page */
+/* Page 4 */
 
 .firstSection {
   padding-top: 20px;
@@ -265,7 +266,7 @@
   width: 124px;
 }
 
-/* Log in page */
+/* Page 5 */
 
 .input-field {
   width: 320px;
