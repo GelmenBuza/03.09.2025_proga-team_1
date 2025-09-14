@@ -8,9 +8,9 @@
 
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -113,9 +113,12 @@
     justify-content: space-between;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 body {
     display: flex;
-    justify-content: center;
     min-height: 100vh;
     justify-content: center;
     background: #fafafa;

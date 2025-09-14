@@ -24,6 +24,7 @@
 
 .logo {
   width: 235px;
+  margin-bottom: 25px;
 }
 
 .logo img {
@@ -97,9 +98,6 @@
   width: 100%;
 }
 
-.logo {
-  margin-bottom: 25px;
-}
 
 .login-form {
   display: flex;
@@ -144,125 +142,163 @@
 
 
 .fb {
-    background: #1877f2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    cursor: pointer;
-    width: 290px;
+  background: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  width: 290px;
 }
 
 .fb-logo {
-    font-size: 22px;
-    font-weight: bold;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .fb-text {
-    font-size: 12px;
-    font-weight: normal;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .center {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 
 /* Profile page */
 
 .firstSection {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .profile {
-    gap: 50px;
-    padding: 0 20px;
+  gap: 50px;
+  padding: 0 20px;
 }
 
 .profileCommunity {
-    width: 100%;
+  width: 100%;
 }
 
 .profileDescription {
-    padding: 0 20px;
-    padding-top: 6px;
-    gap: 2px;
+  padding: 0 20px;
+  padding-top: 6px;
+  gap: 2px;
 }
 
 .link {
-    color: #0F4D73;
+  color: #0F4D73;
 }
 
 .profileButtons {
-    gap: 14px;
-    padding: 0 20px;
-    padding-top: 8px;
+  gap: 14px;
+  padding: 0 20px;
+  padding-top: 8px;
 }
 
 .follow {
-    background-color: #1877F2;
-    color: #fff;
+  background-color: #1877F2;
+  color: #fff;
 }
 
 .message {
-    background-color: #DFDFDF;
+  background-color: #DFDFDF;
 }
 
 .friend {
-    background-color: #DFDFDF;
+  background-color: #DFDFDF;
 }
 
 .storyes {
-    padding: 0 20px;
-    padding-top: 17px;
-    overflow-x: scroll;
-    gap: 10px;
+  padding: 0 20px;
+  padding-top: 17px;
+  overflow-x: scroll;
+  gap: 10px;
 }
 
 .story>button {
-    width: 58px;
-    height: 58px;
-    border: 1px solid #7E7E7E;
-    border-radius: 100%;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #7E7E7E;
+  border-radius: 100%;
 }
 
 .story img {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
 }
 
 .galaryMenu {
-    display: flex;
-    padding: 0 34px;
-    padding-bottom: 12px;
-    padding-top: 18px;
+  display: flex;
+  padding: 0 34px;
+  padding-bottom: 12px;
+  padding-top: 18px;
 }
 
 .galaryMenu button {
-    width: 22px;
-    height: 22px;
+  width: 22px;
+  height: 22px;
 }
 
 .galaryPhoto {
-    display: grid;
-    overflow: scroll;
-    height: 342px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 1px;
+  display: grid;
+  overflow: scroll;
+  height: 342px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px;
 }
 
 .galaryPhoto>img {
-    height: 125px;
+  height: 125px;
 }
 
 .width-124 {
-    width: 124px;
+  width: 124px;
+}
+
+/* Log in page */
+
+.input-field {
+  width: 320px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.login-button {
+  width: 320px;
+  height: 40px;
+  padding: 10px;
+  background-color: #0095f6;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #007bbf;
+}
+
+.more_details {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.more_details a {
+  color: #003569;
+  text-decoration: none;
 }
