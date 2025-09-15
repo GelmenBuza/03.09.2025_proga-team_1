@@ -1,0 +1,9 @@
+# Данные PostgreSQL
+postgres_data/
+*.log
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo

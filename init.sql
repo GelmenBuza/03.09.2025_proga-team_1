@@ -1,0 +1,11 @@
+-- Этот файл выполнится при первом запуске
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE
+);
+
+INSERT INTO users (name, email) VALUES 
+('Иван', 'ivan@example.com'),
+('Мария', 'maria@example.com')
+ON CONFLICT (email) DO NOTHING;
