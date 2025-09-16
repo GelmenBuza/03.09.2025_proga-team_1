@@ -9,7 +9,6 @@ body {
     margin: 0 auto;
 }
 
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -63,19 +62,18 @@ body {
 }
 
 .logo {
+    width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: red;
+    object-fit: cover;
 }
 
 .username {
+    font-family: "Roboto-Medium";
     font-size: 14px;
     font-weight: 500;
     color: #000000;
-}
-
-.points {
-    align-items: end;
+    margin: 0;
 }
 
 .story {
@@ -84,18 +82,14 @@ body {
     align-items: center;
     gap: 17px;
     border: white;
-}
-
-.gradient {
-    border-radius: 50%;
-    background: linear-gradient(#FAF006, #FACC05F0, #FF000096, #6701E912, #6701E912);
+    padding-left: 11px;
 }
 
 .story > button {
-    width: 58px;
-    height: 58px;
-    border: 1px solid #7E7E7E;
-    border-radius: 100%;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border-image-slice: 1;
+    border-radius: 50%;
 }
 
 .story img {
@@ -105,8 +99,13 @@ body {
 }
 
 .name-story {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    gap: 27px;
+    padding-left: 21px;
 }
 
 .img-section-3 {
