@@ -24,8 +24,8 @@
 
     <form class="login-form">
       <input type="text" placeholder="Phone number, email or username" required id="loginInput">
-      <input type="password" placeholder="Password" required>
-      <button class="btn signup-btn">Sign Up</button>
+      <input type="password" placeholder="Password" required id="passwordInput">
+      <button class="btn signup-btn" id="signupBtn">Sign Up</button>
     </form>
 
     <p class="signin-text" id="signinText">
@@ -37,7 +37,7 @@
     </div>
 
     <div class="center">
-      <button class="fb">
+      <button class="fb" id="fbBtn">
         <span class="fb-logo">f</span>
         <span class="fb-text">Sign Up with Facebook</span>
       </button>
@@ -46,51 +46,69 @@
 
   <a href="page_4.html">go to page 4</a>
 
-  <script>
-    const translations = {
-      en: {
-        signup: "Sign Up",
-        signin: 'Already have an account? <a href="#">Sign in.</a>',
-        fb: "Sign Up with Facebook",
-        loginPlaceholder: "Phone number, email or username"
-      },
-      ru: {
-        signup: "Зарегистрироваться",
-        signin: 'Уже есть аккаунт? <a href="#">Войти.</a>',
-        fb: "Войти через Facebook",
-        loginPlaceholder: "Телефон, email или имя пользователя"
-      },
-      es: {
-        signup: "Regístrate",
-        signin: '¿Ya tienes una cuenta? <a href="#">Inicia sesión.</a>',
-        fb: "Regístrate con Facebook",
-        loginPlaceholder: "Teléfono, correo o usuario"
-      },
-    };
-
-    const langSelect = document.getElementById("languageSwitcher");
-    const signupBtn = document.getElementById("signupBtn");
-    const signinText = document.getElementById("signinText");
-    const fbBtn = document.getElementById("fbBtn").querySelector(".fb-text");
-    const loginInput = document.getElementById("loginInput");
-
-    function applyLanguage(lang) {
-      signupBtn.textContent = translations[lang].signup;
-      signinText.innerHTML = translations[lang].signin;
-      fbBtn.textContent = translations[lang].fb;
-      loginInput.placeholder = translations[lang].loginPlaceholder;
-      langSelect.value = lang;
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const translations = {
+    en: {
+      signup: "Sign Up",
+      signin: 'Already have an account? <a href="#">Sign in.</a>',
+      fb: "Sign Up with Facebook",
+      loginPlaceholder: "Phone number, email or username",
+      passwordPlaceholder: "Password"
+    },
+    ru: {
+      signup: "Зарегистрироваться",
+      signin: 'Уже есть аккаунт? <a href="#">Войти.</a>',
+      fb: "Войти через Facebook",
+      loginPlaceholder: "Телефон, email или имя пользователя",
+      passwordPlaceholder: "Пароль"
+    },
+    es: {
+      signup: "Regístrate",
+      signin: '¿Ya tienes una cuenta? <a href="#">Inicia sesión.</a>',
+      fb: "Regístrate con Facebook",
+      loginPlaceholder: "Teléfono, correo o usuario",
+      passwordPlaceholder: "Contraseña"
     }
+  };
 
-    const savedLang = localStorage.getItem("lang") || "en";
-    applyLanguage(savedLang);
+  const langSelect = document.getElementById('languageSwitcher') || document.querySelector('.lang-select');
+  const signupBtn = document.getElementById('signupBtn') || document.querySelector('.signup-btn');
+  const signinTextEl = document.getElementById('signinText') || document.querySelector('.signin-text');
+  const fbTextEl = (document.getElementById('fbBtn') && document.getElementById('fbBtn').querySelector('.fb-text'))
+                   || document.querySelector('.fb .fb-text');
+  const loginInput = document.getElementById('loginInput') || document.querySelector('.login-form input[type="text"]');
+  const passwordInput = document.getElementById('passwordInput') || document.querySelector('.login-form input[type="password"]');
 
-    langSelect.addEventListener("change", () => {
+  function applyLanguage(lang) {
+    const t = translations[lang] || translations['en'];
+
+    if (signupBtn) signupBtn.textContent = t.signup;
+    if (signinTextEl) signinTextEl.innerHTML = t.signin;
+    if (fbTextEl) fbTextEl.textContent = t.fb;
+    if (loginInput) loginInput.placeholder = t.loginPlaceholder;
+    if (passwordInput && t.passwordPlaceholder) passwordInput.placeholder = t.passwordPlaceholder;
+
+    if (langSelect) langSelect.value = lang;
+    document.documentElement.lang = lang;
+  }
+
+  const savedLang = localStorage.getItem('lang') || 'en';
+  applyLanguage(savedLang);
+
+  if (langSelect) {
+    langSelect.addEventListener('change', () => {
       const lang = langSelect.value;
-      localStorage.setItem("lang", lang);
+      localStorage.setItem('lang', lang);
       applyLanguage(lang);
     });
-  </script>
+  } else {
+    console.warn('languageSwitcher не найден в DOM — убедись, что select имеет id="languageSwitcher" или класс .lang-select');
+  }
+
+  console.log('i18n: signupBtn', !!signupBtn, 'signinText', !!signinTextEl, 'fbText', !!fbTextEl);
+});
+</script>
 </body>
 
 </html>
