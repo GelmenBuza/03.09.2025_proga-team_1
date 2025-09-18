@@ -5,5 +5,6 @@ const profile = {
     email: "elda.pisos@gmail.com",
     password: "0000",
 }
+console.log(await register(profile.login, profile.email, profile.password))
 
-console.log(register(profile.login, profile.email, profile.password))
+console.log(await login(profile.email, profile.password))
