@@ -116,6 +116,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 17px;
+    margin-left: 21px;
+    margin-top: 44px;
 }
 
 .Instagram {
@@ -128,9 +131,10 @@
     gap: 25px;
 }
 
-.plus, .heart, .message {
+.plus, .Heart, .message {
   width: 25px;
   height: 25px;
+  cursor: pointer;
 }
 
 .section-1 {
@@ -149,6 +153,8 @@
     gap: 10px;
     padding: 10px 0;
     border-top: 1px solid #e1e1e1;
+    margin-left: 16px;
+    margin-right: 24.73px;
 }
 
 .post_user_logo {
@@ -184,6 +190,13 @@
   cursor: pointer;
 }
 
+.post_footer {
+  margin-left: 15px;
+  margin-right: 31px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
 .likes_and_more {
   display: flex;
   flex-direction: row;
@@ -194,6 +207,14 @@
   display: flex;
   flex-direction: row;
   gap: 15px;
+}
+
+/*p.comments*/
+p.comments {
+  color: #8A8A8A;
+  margin-top: 5.56px;
+  font-size: 14px;
+  margin-bottom: 11.44px;
 }
 
 .story_home {
@@ -217,6 +238,10 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+}
+
+.profile_footer {
+  border-top: 1px solid #C9C9C9;
 }
 
 /* Page 4 */
