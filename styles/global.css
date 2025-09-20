@@ -325,3 +325,7 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+
+.scroll_hider {
+    scrollbar-width: none;
+}

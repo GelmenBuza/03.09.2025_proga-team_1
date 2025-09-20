@@ -116,9 +116,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 17px;
-    margin-left: 21px;
-    margin-top: 44px;
+    padding: 0 20px;
+    padding-top: 40px;
 }
 
 .Instagram {
@@ -138,11 +137,14 @@
 }
 
 .section-1 {
-    margin: 20px 0;
+    padding-top: 10px;
+    padding-bottom: 7px;
 }
 
-.section-2 {
-    border-top: 1px solid #C9C9C9;
+.posts {
+  height: 545px;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
 
 .post_header {
@@ -151,20 +153,17 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    padding: 10px 0;
     border-top: 1px solid #e1e1e1;
-    margin-left: 16px;
-    margin-right: 24.73px;
+    padding: 8px 20px;
 }
 
 .post_user_logo {
     width: 41px;
     height: 41px;
     border-radius: 50%;
-    object-fit: cover;
 }
 
-.user_logo_post {
+.user_post {
   gap: 5px;
 }
 
@@ -172,7 +171,7 @@
     font-family: "Roboto-Medium";
     font-size: 14px;
     font-weight: 500;
-    color: #000000;
+    color: #000;
     margin: 0;
 }
 
@@ -180,21 +179,21 @@
   height: 375px;
   width: 100%;
 }
+
 .post_main img {
   width: 100%;
+}
+
+.post_footer {
+  padding: 0 20px;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .post_footer button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-.post_footer {
-  margin-left: 15px;
-  margin-right: 31px;
-  margin-top: 10px;
-  font-size: 14px;
 }
 
 .likes_and_more {
@@ -209,12 +208,11 @@
   gap: 15px;
 }
 
-/*p.comments*/
-p.comments {
+.comments {
   color: #8A8A8A;
-  margin-top: 5.56px;
+  margin: 0;
+  padding-top: 4px;
   font-size: 14px;
-  margin-bottom: 11.44px;
 }
 
 .story_home {
@@ -225,23 +223,6 @@ p.comments {
 .story_home img {
     width: 73px;
     height: 73px;
-}
-
-.img-section-3 {
-    justify-content: space-between;
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.img-section-3 img {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-}
-
-.profile_footer {
-  border-top: 1px solid #C9C9C9;
 }
 
 /* Page 4 */

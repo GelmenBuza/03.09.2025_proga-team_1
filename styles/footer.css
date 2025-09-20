@@ -39,3 +39,7 @@
     padding: 0 25px;
     align-items: center;
 }
+
+.profile_footer {
+  border-top: 1px solid #C9C9C9;
+}
