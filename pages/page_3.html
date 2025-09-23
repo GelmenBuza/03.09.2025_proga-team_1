@@ -21,29 +21,25 @@
         </header>
         <section class="MW_new_post">
             <div class="MW_container">
+                <span class="text-reg-12">post maker 9000</span>
                 <button class="close">X</button>
                 <form class="MW_form" action="" method="get">
-                    <div>
-                        <label for="post_text">Enter your name:</label>
-                        <input type="text" name="post_text" id="post_text" required>
-                    </div>
+                    <div class="fake-input text-reg-14" contenteditable="true" data-placeholder="Write here..."></div>
+                    <input type="hidden" name="post_text" id="post_text" required>
                     <div>
                         <label for="image">Select Image:</label>
                         <input type="file" id="image" name="image" accept="image/*" required>
                     </div>
+                    <button type="submit" class="btn-reset submit_post">Submit</button>
                 </form>
             </div>
         </section>
         <main>
             <section class="section-1">
-                <div class="storyes text-reg-12 justify-between flex-row scroll_hider">
-
-                </div>
+                <div class="storyes text-reg-12 justify-between flex-row scroll_hider"></div>
             </section>
 
-            <section class="posts">
-
-            </section>
+            <section class="posts"></section>
         </main>
         <footer class="profile_footer">
             <div class="align-center justify-between">

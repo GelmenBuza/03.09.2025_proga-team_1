@@ -66,12 +66,29 @@ const new_post_func = () => {
     const modal_window_post_close = document.querySelector('.close');
     post.addEventListener('click', function () {
         modal_window_post.classList.add('display_on');
+        setTimeout(() => {
+            modal_window_post.classList.add('opacity_1');
+        }, 0)
     });
     modal_window_post_close.addEventListener('click', function () {
-        modal_window_post.classList.remove('display_on');
+        modal_window_post.classList.remove('opacity_1');
+        setTimeout(() => {
+            modal_window_post.classList.remove('display_on');
+        }, 200)
     });
 }
+
+
+const synchronize_inputs = () => {
+    const fakeInput = document.querySelector('.fake-input');
+    const realInput = document.getElementById('real-input');
+    fakeInput.addEventListener('input', function () {
+        realInput.value = this.textContent;
+    });
+}
+
 
 make_post();
 make_storys();
 new_post_func();
+synchronize_inputs();

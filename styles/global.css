@@ -333,3 +333,8 @@ body {
 .display_on {
     display: flex;
 }
+
+.opacity_1 {
+    opacity: 1;
+    transition: opacity 200ms ease;
+}

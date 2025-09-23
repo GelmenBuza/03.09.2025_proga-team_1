@@ -137,13 +137,15 @@
 }
 
 .MW_new_post {
+  display: none;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(255, 255, 255, 0.3);
   width: 375px;
   height: 810px;
   position: absolute;
-  display: none;
-  align-items: center;
-  justify-content: center;
+  opacity: 0;
+  transition: opacity 200ms ease;
 }
 
 .MW_container {
@@ -159,9 +161,37 @@
 .MW_form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  max-width: 100%;
+  gap: 30px;
   padding: 20px;
+}
 
+.fake-input {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  max-height: 100px;
+  width: 100%;
+  white-space: pre-line;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 5px;
+}
+
+.fake-input:empty::before {
+  content: attr(data-placeholder);
+  color: #999
+}
+
+.submit_post {
+  background-color: white !important;
+  border-radius: 8px;
+  width: 70%;
+  height: 20px;
 }
 
 .section-1 {
