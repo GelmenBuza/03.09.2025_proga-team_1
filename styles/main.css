@@ -130,10 +130,38 @@
     gap: 25px;
 }
 
-.plus, .Heart, .message {
+.new_post, .likes, .messager {
   width: 25px;
   height: 25px;
   cursor: pointer;
+}
+
+.MW_new_post {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 375px;
+  height: 810px;
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.MW_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 50%;
+  background-color: #1877F2;
+  border-radius: 50px;
+}
+
+.MW_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+
 }
 
 .section-1 {

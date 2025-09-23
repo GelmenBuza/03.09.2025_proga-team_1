@@ -329,3 +329,7 @@ body {
 .scroll_hider {
     scrollbar-width: none;
 }
+
+.display_on {
+    display: flex;
+}

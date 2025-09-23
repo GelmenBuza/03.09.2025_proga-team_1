@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/global.css">
+    <script src="../src/page_3.js" defer></script>
     <title>Instagram</title>
 </head>
 
@@ -13,94 +14,35 @@
         <header class="header">
             <div class="Instagram"><img src="../images/logos_instagram.svg" alt="logo"></div>
             <div class="header-img">
-                <img class="plus" src="../images/plus.svg" alt="plus">
-                <img class="Heart" src="../images/heart.svg" alt="Heart">
-                <img class="message" src="../images/message.svg" alt="message">
+                <button class="btn-reset new_post"><img src="../images/plus.svg" alt="new_post"></button>
+                <button class="btn-reset likes"><img src="../images/heart.svg" alt="likes"></button>
+                <button class="btn-reset messager"><img src="../images/message.svg" alt="messager"></button>
             </div>
         </header>
+        <section class="MW_new_post">
+            <div class="MW_container">
+                <button class="close">X</button>
+                <form class="MW_form" action="" method="get">
+                    <div>
+                        <label for="post_text">Enter your name:</label>
+                        <input type="text" name="post_text" id="post_text" required>
+                    </div>
+                    <div>
+                        <label for="image">Select Image:</label>
+                        <input type="file" id="image" name="image" accept="image/*" required>
+                    </div>
+                </form>
+            </div>
+        </section>
         <main>
             <section class="section-1">
                 <div class="storyes text-reg-12 justify-between flex-row scroll_hider">
-                    <div class="story_home align-center flex-col">
-                        <button class="btn-base btn-reset"><img src="../images/stories/myStory.svg"
-                                alt="${i+1}"></button>
-                        <span>Your story</span>
-                    </div>
-                    <div class="story_home align-center flex-col">
-                        <button class="btn-base btn-reset"><img src="../images/stories/first.svg" alt="${i+1}"></button>
-                        <span>leo.messi</span>
-                    </div>
-                    <div class="story_home align-center flex-col">
-                        <button class="btn-base btn-reset"><img src="../images/stories/second.svg"
-                                alt="${i+1}"></button>
-                        <span>leo.messi</span>
-                    </div>
-                    <div class="story_home align-center flex-col">
-                        <button class="btn-base btn-reset"><img src="../images/stories/third.svg" alt="${i+1}"></button>
-                        <span>leo.messi</span>
-                    </div>
-                    <div class="story_home align-center flex-col">
-                        <button class="btn-base btn-reset"><img src="../images/stories/fouth.svg" alt="${i+1}"></button>
-                        <span>leo.messi</span>
-                    </div>
+
                 </div>
             </section>
 
             <section class="posts">
-                <div class="post">
-                    <div class="post_header">
-                        <div class="user_post flex-row align-center">
-                            <img class="post_user_logo" src="../images/marvel.svg" alt="Marvel">
-                            <p class="username">marvel</p>
-                        </div>
-                        <img class="points" src="../images/dots.svg" alt="points">
-                    </div>
-                    <div class="post_main">
-                        <img src="../images/loki.svg" alt="Loki">
-                    </div>
-                    <div class="post_footer">
-                        <div class="likes_and_more">
-                            <div>
-                                <button><img src="../images/like.svg" alt="like"></button>
-                                <button><img src="../images/comment.svg" alt="comments"></button>
-                                <button><img src="../images/shair.svg" alt="share"></button>
-                            </div>
-                            <button><img src="../images/zakladka.svg" alt="zakladka"></button>
-                        </div>
-                        <p>Liked by <strong>thekamraan</strong> and <strong>905,235 others</strong></p>
-                        <p><strong>marvel</strong> Start your countdown to the glorious arrival of Marvel Studios'
-                            #Loki...<a href="#">more</a>
-                        </p>
-                        <p class="comments">View all 103 comments</p>
-                    </div>
-                </div>
-                                <div class="post">
-                    <div class="post_header">
-                        <div class="user_post flex-row align-center">
-                            <img class="post_user_logo" src="../images/marvel.svg" alt="Marvel">
-                            <p class="username">marvel</p>
-                        </div>
-                        <img class="points" src="../images/dots.svg" alt="points">
-                    </div>
-                    <div class="post_main">
-                        <img src="../images/loki.svg" alt="Loki">
-                    </div>
-                    <div class="post_footer">
-                        <div class="likes_and_more">
-                            <div>
-                                <button><img src="../images/like.svg" alt="like"></button>
-                                <button><img src="../images/comment.svg" alt="comments"></button>
-                                <button><img src="../images/shair.svg" alt="share"></button>
-                            </div>
-                            <button><img src="../images/zakladka.svg" alt="zakladka"></button>
-                        </div>
-                        <p>Liked by <strong>thekamraan</strong> and <strong>905,235 others</strong></p>
-                        <p><strong>marvel</strong> Start your countdown to the glorious arrival of Marvel Studios'
-                            #Loki...<a href="#">more</a>
-                        </p>
-                        <p class="comments">View all 103 comments</p>
-                    </div>
-                </div>
+
             </section>
         </main>
         <footer class="profile_footer">
