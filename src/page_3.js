@@ -1,6 +1,12 @@
+import { register } from '../api/auth.js';
+import {makePost, getAllPosts} from '../api/posts.js' 
+
+
 const storys = {
     name: ['Your story', 'leo.messi', 'leo.messi', 'leo.messi', 'leo.messi', 'leo.messi', 'leo.messi'],
-    image: ["../images/stories/myStory.svg", "../images/stories/first.svg", "../images/stories/second.svg", "../images/stories/third.svg", "../images/stories/fouth.svg", "../images/stories/fouth.svg", "../images/stories/fouth.svg"],
+    image: ["../images/stories/myStory.svg", "../images/stories/first.svg", "../images/stories/second.svg", 
+        "../images/stories/third.svg", "../images/stories/fouth.svg", "../images/stories/fouth.svg", 
+        "../images/stories/fouth.svg"],
 };
 
 const posts = {
@@ -92,3 +98,19 @@ make_post();
 make_storys();
 new_post_func();
 synchronize_inputs();
+
+// Тестовая часть
+
+console.log(register('Gelmen_', 'elda.pisos@gail.com', '12345678'))
+
+console.log(makePost('test', '../images/marvel.svg', 'test'))
+
+// console.log(getAllPosts())
+
+// async function ping() {
+//     return await apiRequest("http://92.255.79.122:8080/api/v1/ping"), {
+//         method: "GET",
+//     }
+// }
+
+// console.log(ping())
