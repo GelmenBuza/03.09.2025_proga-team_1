@@ -1,4 +1,4 @@
-import { register } from '../api/auth.js';
+import { register, verify_email } from '../api/auth.js';
 import {makePost, getAllPosts} from '../api/posts.js' 
 
 
@@ -67,7 +67,6 @@ const make_post = () => {
 
 const new_post_func = () => {
     const post = document.querySelector('.new_post');
-    console.log(post);
     const modal_window_post = document.querySelector('.MW_new_post');
     const modal_window_post_close = document.querySelector('.close');
     post.addEventListener('click', function () {
@@ -101,9 +100,13 @@ synchronize_inputs();
 
 // Тестовая часть
 
-console.log(register('Gelmen_', 'elda.pisos@gail.com', '12345678'))
+// user  qwerty1234
 
-console.log(makePost('test', '../images/marvel.svg', 'test'))
+// console.log(verify_email("2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"))
+
+// token 2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100
+
+// console.log(makePost('test', '../images/marvel.svg', 'test'))
 
 // console.log(getAllPosts())
 

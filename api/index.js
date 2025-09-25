@@ -14,7 +14,8 @@ export default async function apiRequest(accessToken, url, req, attemps = 2){
             credentials: "include",
             headers:{
                 ...req.headers,
-                "Authorization": `Bearer ${accessToken}`
+                "Authorization": `Bearer ${accessToken}`,
+                "Referer": "http://localhost:5500"
             }
         })
 
