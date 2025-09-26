@@ -23,15 +23,17 @@ async function register(login, email, password) {
 async function login(login, password) {
     const res = await fetch(`${API_URL}/login`, {
         method: "POST",
+        credentials: "include",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Referer": "http://127.0.0.1:5500/"
         },
         body: JSON.stringify({
             login,
             password
         })
     })
-    return await res.json()
+    return res.json()
 }
 
 async function logout() {
@@ -41,13 +43,22 @@ async function logout() {
     return await res.json()
 }
 
+
+// async function refresh-token() {
+//     const res = await fetch(`${API_URL}/logout`, {
+//         method: "POST",
+//     })
+//     return await res.json()
+// }
+
 async function verify_email(token) {
-    const res = await fetch(`${API_URL}/verify_email`, {
+    const res = await fetch(`${API_URL}/verify-email`, {
         method: "POST",
         credentials: "include",
         headers: {
             "Content-Type": "application/json",
-            "Referer": "http://127.0.0.1:5500/"
+            "Referer": "http://127.0.0.1:5500/",
+            "Authorization": `Bearer ${token}`,
         },
         body: JSON.stringify({
             token,

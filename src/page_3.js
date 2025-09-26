@@ -1,4 +1,4 @@
-import { register, verify_email } from '../api/auth.js';
+import { login, register, verify_email } from '../api/auth.js';
 import {makePost, getAllPosts} from '../api/posts.js' 
 
 
@@ -101,9 +101,10 @@ synchronize_inputs();
 // Тестовая часть
 
 // user  qwerty1234
-
+// console.log(register('Gelmen__', "test2626@gmail.com", 'qwerty1234'))
+// console.log()
 // console.log(verify_email("2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"))
-
+// console.log(login('danil.danich.22825@gmail.com', 'qwerty1234'))
 // token 2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100
 
 // console.log(makePost('test', '../images/marvel.svg', 'test'))
