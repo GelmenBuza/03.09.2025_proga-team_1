@@ -16,7 +16,7 @@ export default async function apiRequest(accessToken, url, req, attemps = 2){
                 ...req.headers,
                 "Authorization": `Bearer ${accessToken}`,
                 "Referer": "http://localhost:5500"
-            }
+            },
         })
 
         if  (resp.status > 300 ) throw new Error({

@@ -20,20 +20,23 @@ async function register(login, email, password) {
     return res.json()
 }
 
-async function login(login, password) {
+async function login(login_or_email, password) {
+
+    const accessToken = window.localStorage.getItem('accessToken')
     const res = await fetch(`${API_URL}/login`, {
         method: "POST",
         credentials: "include",
         headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${accessToken}`,
             "Referer": "http://127.0.0.1:5500/"
         },
         body: JSON.stringify({
-            login,
+            login_or_email,
             password
         })
     })
-    return res.json()
+    return await res.json()
 }
 
 async function logout() {

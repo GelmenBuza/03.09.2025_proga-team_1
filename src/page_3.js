@@ -101,13 +101,31 @@ synchronize_inputs();
 // Тестовая часть
 
 // user  qwerty1234
-// console.log(register('Gelmen__', "test2626@gmail.com", 'qwerty1234'))
+// console.log(register('Gelmen_', "test2626@gmail.com", 'qwerty1234'))
 // console.log()
 // console.log(verify_email("2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"))
 // console.log(login('danil.danich.22825@gmail.com', 'qwerty1234'))
-// token 2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100
+const mainToken = "2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"
+window.localStorage.setItem('accessToken', mainToken)
 
-// console.log(makePost('test', '../images/marvel.svg', 'test'))
+
+const loginResult = await login('danil.danich.22825@gmail.com','qwerty1234');
+// const tempToken = loginResult
+console.log('Login result:',loginResult)
+
+const tempToken = loginResult.data.access_token;
+
+window.sessionStorage.setItem('accessToken', tempToken)
+
+
+
+
+
+
+
+console.log('Make post:', makePost('test', 'https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg', 'test'))
+
+console.log('Get post:', await getAllPosts())
 
 // console.log(getAllPosts())
 

@@ -1,6 +1,6 @@
 import apiRequest from './index.js';
 
-const API_URL = "http://92.255.79.122:8080/api/v1/post";
+const API_URL = "http://92.255.79.122:9999/api/v1";
 
 async function makePost(caption, image_url, location) {
     let token = window.sessionStorage.getItem("accessToken")
