@@ -13,6 +13,7 @@ const posts = {
     profile_avatar: ['../images/marvel.svg', '../images/marvel.svg', '../images/marvel.svg'],
     profile_name: ['marvel', 'huarvel', 'giiiiiiiiii'],
     image: ['../images/loki.svg', '../images/loki.svg', '../images/loki.svg'],
+    caption: ["Start your countdown to the glorious arrival of Marvel Studios #Loki","Start your countdown to the glorious arrival of Marvel Studios #Loki","Start your countdown to the glorious arrival of Marvel Studios #Loki"]
 };
 
 const make_storys = () => {
@@ -55,8 +56,7 @@ const make_post = () => {
                     <button><img src="../images/zakladka.svg" alt="zakladka"></button>
                 </div>
                 <p>Liked by <strong>thekamraan</strong> and <strong>905,235 others</strong></p>
-                <p><strong>marvel</strong> Start your countdown to the glorious arrival of Marvel Studios'
-                    #Loki...<a href="#">more</a>
+                <p><strong>${posts.profile_name[i]}</strong> ${posts.caption[i]}<a href="#">more</a>
                 </p>
                 <p class="comments">View all 103 comments</p>
             </div>
@@ -102,37 +102,29 @@ synchronize_inputs();
 
 // user  qwerty1234
 // console.log(register('Gelmen_', "test2626@gmail.com", 'qwerty1234'))
-// console.log()
-// console.log(verify_email("2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"))
-// console.log(login('danil.danich.22825@gmail.com', 'qwerty1234'))
-const mainToken = "2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"
-window.localStorage.setItem('accessToken', mainToken)
+// console.log(await register("elda.pisos", "elda.pisos@gmail.com", "qwerty1234"))
+// console.log(verify_email(eldaToken))
+// console.log(login('Gelmen_', 'qwerty1234'))
+// const user1Token = "2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"
+// const user2Token = "882b347f172f8940e7a8b8d77caf82a0a180eb207a2c0d19ea62a8c116724d73"
 
-
-const loginResult = await login('danil.danich.22825@gmail.com','qwerty1234');
-// const tempToken = loginResult
-console.log('Login result:',loginResult)
-
-const tempToken = loginResult.data.access_token;
-
-window.sessionStorage.setItem('accessToken', tempToken)
-
-
-
+// window.localStorage.setItem('accessToken', user2Token)
+// 
+// const loginResult = await login('elda.pisos@gmail.com','qwerty1234');
+// console.log('Login result:',loginResult)
+// 
+// const tempToken = loginResult.data.access_token;
+// 
+// window.sessionStorage.setItem('accessToken', tempToken)
 
 
 
 
-console.log('Make post:', makePost('test', 'https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg', 'test'))
 
-console.log('Get post:', await getAllPosts())
+
+
+// console.log('Make post:', makePost('test2', 'https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg', 'test'))
+
+// console.log('Get post:', await getAllPosts())
 
 // console.log(getAllPosts())
-
-// async function ping() {
-//     return await apiRequest("http://92.255.79.122:8080/api/v1/ping"), {
-//         method: "GET",
-//     }
-// }
-
-// console.log(ping())
