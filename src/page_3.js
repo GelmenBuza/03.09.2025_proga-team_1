@@ -1,20 +1,82 @@
 import { login, register, verify_email } from '../api/auth.js';
-import {makePost, getAllPosts} from '../api/posts.js' 
+import { makePost, getAllPosts, deletePost} from '../api/posts.js';
+import * as pars from './parsers.js'
+
+
+
+const user1Token = "2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"
+// const user2Token = "882b347f172f8940e7a8b8d77caf82a0a180eb207a2c0d19ea62a8c116724d73"
+window.localStorage.setItem('accessToken', user1Token)
+const loginResult = await login('Gelmen_','qwerty1234');
+console.log('Login result:',loginResult)
+const tempToken = loginResult.data.access_token;
+window.sessionStorage.setItem('accessToken', tempToken)
+// console.log('Get post:', await getAllPosts())
+
+
+
+const logged_user_name = 'Rab'
 
 
 const storys = {
-    name: ['Your story', 'leo.messi', 'leo.messi', 'leo.messi', 'leo.messi', 'leo.messi', 'leo.messi'],
-    image: ["../images/stories/myStory.svg", "../images/stories/first.svg", "../images/stories/second.svg", 
-        "../images/stories/third.svg", "../images/stories/fouth.svg", "../images/stories/fouth.svg", 
+    name: [`${logged_user_name}`, 'leo.messi', 'leo.messi', 'leo.messi', 'leo.messi', 'leo.messi', 'leo.messi'],
+    image: ["../images/stories/myStory.svg", "../images/stories/first.svg", "../images/stories/second.svg",
+        "../images/stories/third.svg", "../images/stories/fouth.svg", "../images/stories/fouth.svg",
         "../images/stories/fouth.svg"],
 };
 
+
+const getFormData = () => {
+    document.getElementById('postForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const description = document.getElementById('post_caption').value.trim();
+        const photo_url = document.getElementById('post_image').value.trim();
+
+        if (!description) {
+            alert('Please enter a description.');
+            return;
+        }
+
+        if (!photo_url) {
+            alert('Please enter the URL of the photo.')
+            return;
+        }
+
+        try {
+            new URL(photo_url);
+        } catch (err) {
+            alert('Invalid photo URL.')
+            return;
+        }
+        const makePostRespose = makePost(`${logged_user_name} |-| none |-| ${description}` , photo_url, '');
+        // console.log('Make post:', makePostRespose)
+        // console.log('Get post:', getAllPosts())
+    })
+}
+
+
 const posts = {
-    profile_avatar: ['../images/marvel.svg', '../images/marvel.svg', '../images/marvel.svg'],
-    profile_name: ['marvel', 'huarvel', 'giiiiiiiiii'],
-    image: ['../images/loki.svg', '../images/loki.svg', '../images/loki.svg'],
-    caption: ["Start your countdown to the glorious arrival of Marvel Studios #Loki","Start your countdown to the glorious arrival of Marvel Studios #Loki","Start your countdown to the glorious arrival of Marvel Studios #Loki"]
+    profile_avatar: '../images/marvel.svg',
+    profile_name: [],
+    image: [],
+    caption: []
 };
+
+
+async function postHandlerFromServer () {
+    const postsOnServer = await getAllPosts()
+    console.log('Get post:', postsOnServer.data)
+    for (const post of postsOnServer.data){
+        const tmp_post_data = pars.post_parser(post);
+        posts.profile_name.push(tmp_post_data.user_name)
+        posts.image.push(tmp_post_data.post_photo_url)
+        posts.caption.push(tmp_post_data.post_caption)
+    }
+}
+
+await postHandlerFromServer();
+console.log('local post object:', posts)
 
 const make_storys = () => {
     const story_container = document.querySelector('.storyes')
@@ -38,7 +100,7 @@ const make_post = () => {
         <div class="post">
             <div class="post_header">
                 <div class="user_post flex-row align-center">
-                    <img class="post_user_logo" src="${posts.profile_avatar[i]}" alt="${posts.profile_name[i]}">
+                    <img class="post_user_logo" src="${posts.profile_avatar}" alt="${posts.profile_name[i]}">
                     <p class="username">${posts.profile_name[i]}</p>
                 </div>
                 <img class="points" src="../images/dots.svg" alt="points">
@@ -85,14 +147,20 @@ const new_post_func = () => {
 
 
 const synchronize_inputs = () => {
-    const fakeInput = document.querySelector('.fake-input');
-    const realInput = document.getElementById('real-input');
-    fakeInput.addEventListener('input', function () {
-        realInput.value = this.textContent;
+    const fakeInputDesc = document.getElementById('fake-input-desc');
+    const realInputDesc = document.getElementById('post_caption');
+    fakeInputDesc.addEventListener('input', function () {
+        realInputDesc.value = this.textContent;
+    });
+
+    const fakeInputURL = document.getElementById('fake-input-url');
+    const realInputURL = document.getElementById('post_image');
+    fakeInputURL.addEventListener('input', function () {
+        realInputURL.value = this.textContent;
     });
 }
 
-
+getFormData();
 make_post();
 make_storys();
 new_post_func();
@@ -105,26 +173,90 @@ synchronize_inputs();
 // console.log(await register("elda.pisos", "elda.pisos@gmail.com", "qwerty1234"))
 // console.log(verify_email(eldaToken))
 // console.log(login('Gelmen_', 'qwerty1234'))
-// const user1Token = "2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"
-// const user2Token = "882b347f172f8940e7a8b8d77caf82a0a180eb207a2c0d19ea62a8c116724d73"
-
-// window.localStorage.setItem('accessToken', user2Token)
-// 
-// const loginResult = await login('elda.pisos@gmail.com','qwerty1234');
-// console.log('Login result:',loginResult)
-// 
-// const tempToken = loginResult.data.access_token;
-// 
-// window.sessionStorage.setItem('accessToken', tempToken)
-
-
-
-
 
 
 
 // console.log('Make post:', makePost('test2', 'https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg', 'test'))
 
-// console.log('Get post:', await getAllPosts())
+
+
+
 
 // console.log(getAllPosts())
+
+
+// const posts_from_api = [
+//     {
+//         "id": 3,
+//         "user_id": 30,
+//         "caption": "user_name |-| post_photo |-| post_caption",
+//         "image_url": "https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg",
+//         "location": "test",
+//         "user": {
+//             "id": 0,
+//             "unique_id": "",
+//             "login": "",
+//             "email": "",
+//             "password": "",
+//             "avatar_url": null,
+//             "is_email_verified": false,
+//             "email_verify_link": "",
+//             "refresh_token": "",
+//             "created_at": 0,
+//             "updated_at": 0
+//         },
+//         "likes": [],
+//         "comments": [],
+//         "created_at": 1759326211,
+//         "updated_at": 1759326211
+//     },
+//     {
+//         "id": 2,
+//         "user_id": 28,
+//         "caption": "user_name |-| none |-| post_caption",
+//         "image_url": "https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg",
+//         "location": "test",
+//         "user": {
+//             "id": 0,
+//             "unique_id": "",
+//             "login": "",
+//             "email": "",
+//             "password": "",
+//             "avatar_url": null,
+//             "is_email_verified": false,
+//             "email_verify_link": "",
+//             "refresh_token": "",
+//             "created_at": 0,
+//             "updated_at": 0
+//         },
+//         "likes": [],
+//         "comments": [],
+//         "created_at": 1759318511,
+//         "updated_at": 1759318511
+//     },
+//     {
+//         "id": 1,
+//         "user_id": 28,
+//         "caption": "user_name |-| post_photo |-| post_caption",
+//         "image_url": "https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg",
+//         "location": "test",
+//         "user": {
+//             "id": 0,
+//             "unique_id": "",
+//             "login": "",
+//             "email": "",
+//             "password": "",
+//             "avatar_url": null,
+//             "is_email_verified": false,
+//             "email_verify_link": "",
+//             "refresh_token": "",
+//             "created_at": 0,
+//             "updated_at": 0
+//         },
+//         "likes": [],
+//         "comments": [],
+//         "created_at": 1759229652,
+//         "updated_at": 1759229652
+//     }
+// ]
+

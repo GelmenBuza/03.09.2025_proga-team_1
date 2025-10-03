@@ -19,19 +19,23 @@
                 <button class="btn-reset messager"><img src="../images/message.svg" alt="messager"></button>
             </div>
         </header>
-        <section class="MW_new_post">
+        <section class="MW_new_post"> 
             <div class="MW_container">
                 <span class="text-reg-12">post maker 9000</span>
                 <button class="close">X</button>
-                <form class="MW_form" action="" method="get">
-                    <div class="fake-input text-reg-14" contenteditable="true" data-placeholder="Write here..."></div>
-                    <input type="hidden" name="post_text" id="post_text" required>
-                    <div>
-                        <label for="image">Select Image:</label>
-                        <input type="file" id="image" name="image" accept="image/*" required>
-                    </div>
+
+                <form class="MW_form" id="postForm" action="" method="get">
+
+                    <div class="fake-input text-reg-14" id="fake-input-desc" contenteditable="true" data-placeholder="Write here..."></div> <!-- post caption -->
+                    <input type="hidden" name="post_caption" id="post_caption" required>
+
+                    <div class="fake-input text-reg-14" id="fake-input-url" contenteditable="true" data-placeholder="Write image url/path..."></div> <!-- post image -->
+                    <input type="hidden" name="post_image" id="post_image" required>
+
                     <button type="submit" class="btn-reset submit_post">Submit</button>
+                    
                 </form>
+
             </div>
         </section>
         <main>

@@ -60,4 +60,4 @@ async function postsLenta(page, limit) {
     })
 }
 
-export {makePost, getAllPosts}
+export {makePost, getAllPosts, deletePost}
