@@ -4,15 +4,90 @@ import * as pars from './parsers.js'
 
 
 
-const user1Token = "2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"
+// const user1Token = "2786270a3fd09fee18b810581ee77589247c9e6f9bd492dc96a111cc09052100"
 // const user2Token = "882b347f172f8940e7a8b8d77caf82a0a180eb207a2c0d19ea62a8c116724d73"
-window.localStorage.setItem('accessToken', user1Token)
-const loginResult = await login('Gelmen_','qwerty1234');
-console.log('Login result:',loginResult)
-const tempToken = loginResult.data.access_token;
-window.sessionStorage.setItem('accessToken', tempToken)
-// console.log('Get post:', await getAllPosts())
+// window.localStorage.setItem('accessToken', user1Token);
+// const loginResult = await login('Gelmen_','qwerty1234');
+// console.log('Login result:',loginResult)
+// const tempToken = loginResult.data.access_token;
+// window.sessionStorage.setItem('accessToken', tempToken)
+//console.log('Get post:', await getAllPosts())
 
+
+const posts_from_api = [
+    {
+        "id": 3,
+        "user_id": 30,
+        "caption": "user_name |-| post_photo |-| post_caption",
+        "image_url": "https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg",
+        "location": "test",
+        "user": {
+            "id": 0,
+            "unique_id": "",
+            "login": "",
+            "email": "",
+            "password": "",
+            "avatar_url": null,
+            "is_email_verified": false,
+            "email_verify_link": "",
+            "refresh_token": "",
+            "created_at": 0,
+            "updated_at": 0
+        },
+        "likes": [],
+        "comments": [],
+        "created_at": 1759326211,
+        "updated_at": 1759326211
+    },
+    {
+        "id": 2,
+        "user_id": 28,
+        "caption": "user_name |-| none |-| post_caption",
+        "image_url": "https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg",
+        "location": "test",
+        "user": {
+            "id": 0,
+            "unique_id": "",
+            "login": "",
+            "email": "",
+            "password": "",
+            "avatar_url": null,
+            "is_email_verified": false,
+            "email_verify_link": "",
+            "refresh_token": "",
+            "created_at": 0,
+            "updated_at": 0
+        },
+        "likes": [],
+        "comments": [],
+        "created_at": 1759318511,
+        "updated_at": 1759318511
+    },
+    {
+        "id": 1,
+        "user_id": 28,
+        "caption": "user_name |-| post_photo |-| post_caption",
+        "image_url": "https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg",
+        "location": "test",
+        "user": {
+            "id": 0,
+            "unique_id": "",
+            "login": "",
+            "email": "",
+            "password": "",
+            "avatar_url": null,
+            "is_email_verified": false,
+            "email_verify_link": "",
+            "refresh_token": "",
+            "created_at": 0,
+            "updated_at": 0
+        },
+        "likes": [],
+        "comments": [],
+        "created_at": 1759229652,
+        "updated_at": 1759229652
+    }
+]
 
 
 const logged_user_name = 'Rab'
@@ -65,9 +140,11 @@ const posts = {
 
 
 async function postHandlerFromServer () {
-    const postsOnServer = await getAllPosts()
+    // const postsOnServer = await getAllPosts()
+    const postsOnServer = posts_from_api
     console.log('Get post:', postsOnServer.data)
-    for (const post of postsOnServer.data){
+    // for (const post of postsOnServer.data){
+    for (const post of postsOnServer){
         const tmp_post_data = pars.post_parser(post);
         posts.profile_name.push(tmp_post_data.user_name)
         posts.image.push(tmp_post_data.post_photo_url)
@@ -112,10 +189,20 @@ const make_post = () => {
                 <div class="likes_and_more">
                     <div>
                         <button><img src="../images/like.svg" alt="like"></button>
-                        <button><img src="../images/comment.svg" alt="comments"></button>
+                        <button id="commentButton"><img src="../images/comment.svg" alt="comments"></button>
                         <button><img src="../images/shair.svg" alt="share"></button>
                     </div>
                     <button><img src="../images/zakladka.svg" alt="zakladka"></button>
+                </div>
+                <div class="content_container">
+                    <form class="commentForm" id="commentForm" action="" method="get">
+
+                        <div class="fake-input text-reg-14" id="fake-input-comment" contenteditable="true" data-placeholder="Write your comment here..."></div>
+                        <input type="hidden" name="comment_input" id="comment_input" required>
+
+                        <button type="submit" class="btn-reset submit_comment">Submit</button>
+                    
+                    </form>
                 </div>
                 <p>Liked by <strong>thekamraan</strong> and <strong>905,235 others</strong></p>
                 <p><strong>${posts.profile_name[i]}</strong> ${posts.caption[i]}<a href="#">more</a>
@@ -143,6 +230,11 @@ const new_post_func = () => {
             modal_window_post.classList.remove('display_on');
         }, 200)
     });
+}
+
+const comment_display_func = () => {
+    const commentButton = document.getElementById('commentButton');
+    const commentCont = document.querySelector('.content_container')
 }
 
 
@@ -185,78 +277,5 @@ synchronize_inputs();
 // console.log(getAllPosts())
 
 
-// const posts_from_api = [
-//     {
-//         "id": 3,
-//         "user_id": 30,
-//         "caption": "user_name |-| post_photo |-| post_caption",
-//         "image_url": "https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg",
-//         "location": "test",
-//         "user": {
-//             "id": 0,
-//             "unique_id": "",
-//             "login": "",
-//             "email": "",
-//             "password": "",
-//             "avatar_url": null,
-//             "is_email_verified": false,
-//             "email_verify_link": "",
-//             "refresh_token": "",
-//             "created_at": 0,
-//             "updated_at": 0
-//         },
-//         "likes": [],
-//         "comments": [],
-//         "created_at": 1759326211,
-//         "updated_at": 1759326211
-//     },
-//     {
-//         "id": 2,
-//         "user_id": 28,
-//         "caption": "user_name |-| none |-| post_caption",
-//         "image_url": "https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg",
-//         "location": "test",
-//         "user": {
-//             "id": 0,
-//             "unique_id": "",
-//             "login": "",
-//             "email": "",
-//             "password": "",
-//             "avatar_url": null,
-//             "is_email_verified": false,
-//             "email_verify_link": "",
-//             "refresh_token": "",
-//             "created_at": 0,
-//             "updated_at": 0
-//         },
-//         "likes": [],
-//         "comments": [],
-//         "created_at": 1759318511,
-//         "updated_at": 1759318511
-//     },
-//     {
-//         "id": 1,
-//         "user_id": 28,
-//         "caption": "user_name |-| post_photo |-| post_caption",
-//         "image_url": "https://sitechecker.pro/wp-content/uploads/2023/05/URL-meaning.jpg",
-//         "location": "test",
-//         "user": {
-//             "id": 0,
-//             "unique_id": "",
-//             "login": "",
-//             "email": "",
-//             "password": "",
-//             "avatar_url": null,
-//             "is_email_verified": false,
-//             "email_verify_link": "",
-//             "refresh_token": "",
-//             "created_at": 0,
-//             "updated_at": 0
-//         },
-//         "likes": [],
-//         "comments": [],
-//         "created_at": 1759229652,
-//         "updated_at": 1759229652
-//     }
-// ]
+
 

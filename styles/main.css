@@ -283,6 +283,32 @@
     height: 73px;
 }
 
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: #c1c1c1, solid, 1px;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 5px;
+}
+
+.commentForm > div {
+  width: 90%;
+  max-height: 150px;
+  min-height: 50px;
+  background-color: #eeeeee;
+}
+
+.commentForm > button {
+  background-color: #dbdbdb;
+  border-radius: 8px;
+  width: 90%;
+  height: 20px;
+}
+
 /* Page 4 */
 .firstSection {
   padding-top: 20px;
