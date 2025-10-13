@@ -283,6 +283,10 @@
     height: 73px;
 }
 
+.comment_container {
+  display: none;
+}
+
 .commentForm {
   display: flex;
   flex-direction: column;
@@ -290,6 +294,7 @@
   justify-content: center;
   background-color: transparent;
   border: #c1c1c1, solid, 1px;
+  width: 100%;
   border-radius: 10px;
   padding: 10px;
   gap: 5px;

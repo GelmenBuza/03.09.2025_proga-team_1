@@ -1,5 +1,5 @@
 import { login, register, verify_email } from '../api/auth.js';
-import { makePost, getAllPosts, deletePost} from '../api/posts.js';
+import { makePost, getAllPosts, deletePost } from '../api/posts.js';
 import * as pars from './parsers.js'
 
 
@@ -124,7 +124,7 @@ const getFormData = () => {
             alert('Invalid photo URL.')
             return;
         }
-        const makePostRespose = makePost(`${logged_user_name} |-| none |-| ${description}` , photo_url, '');
+        const makePostRespose = makePost(`${logged_user_name} |-| none |-| ${description}`, photo_url, '');
         // console.log('Make post:', makePostRespose)
         // console.log('Get post:', getAllPosts())
     })
@@ -139,12 +139,12 @@ const posts = {
 };
 
 
-async function postHandlerFromServer () {
+async function postHandlerFromServer() {
     // const postsOnServer = await getAllPosts()
     const postsOnServer = posts_from_api
     console.log('Get post:', postsOnServer.data)
     // for (const post of postsOnServer.data){
-    for (const post of postsOnServer){
+    for (const post of postsOnServer) {
         const tmp_post_data = pars.post_parser(post);
         posts.profile_name.push(tmp_post_data.user_name)
         posts.image.push(tmp_post_data.post_photo_url)
@@ -194,7 +194,7 @@ const make_post = () => {
                     </div>
                     <button><img src="../images/zakladka.svg" alt="zakladka"></button>
                 </div>
-                <div class="content_container">
+                <div class="comment_container">
                     <form class="commentForm" id="commentForm" action="" method="get">
 
                         <div class="fake-input text-reg-14" id="fake-input-comment" contenteditable="true" data-placeholder="Write your comment here..."></div>
@@ -233,8 +233,13 @@ const new_post_func = () => {
 }
 
 const comment_display_func = () => {
-    const commentButton = document.getElementById('commentButton');
-    const commentCont = document.querySelector('.content_container')
+    document.querySelectorAll('#commentButton').forEach(commentButton => {
+        commentButton.addEventListener('click', function () {
+            const post = this.closest('.post');
+            const commentCont = post.querySelector('.comment_container');
+            commentCont.classList.toggle('display_on');
+        });
+    });
 }
 
 
@@ -256,6 +261,7 @@ getFormData();
 make_post();
 make_storys();
 new_post_func();
+comment_display_func();
 synchronize_inputs();
 
 // Тестовая часть
